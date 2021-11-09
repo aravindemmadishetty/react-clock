@@ -5,9 +5,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --length: 100px;
+  --desktop-ratio: 5;
+  --seconds : 4;
+  --minutes : 3;
+  --hours : 2;
+  display: grid;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root{
+  margin: auto;
+  text-align: center;
+}
+
+.clock-circle{
+  margin-top: 50px;
+  height: 500px;
+  width: 500px;
+  border-radius: 250px;
+  position: relative;
+  border: 5px solid black;
+  transform : rotate(-90deg);
+}
+
+.clock-hand{
+  border: 2px solid black;
+  background-color: black;
+  transform-origin: left;
+  position: absolute;
+  top: 250px;
+  left: 250px;
+}
+
+.seconds-hand{
+  width : 200px;
+}
+
+.minutes-hand{
+  width : 150px;
+  height: 1px;
+}
+
+.hours-hand{
+  width : 100px;
+  height: 2px;
 }
